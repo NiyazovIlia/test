@@ -1,1 +1,1 @@
-web: gunicorn DTP
+web: gunicorn DTP:DTP
