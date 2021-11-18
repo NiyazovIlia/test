@@ -1,1 +1,1 @@
-web: gunicorn DTP.py
+web: gunicorn DTP
