@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form action="{{ url_for('predict')}}"method="POST" enctype="multipart/form-data">
+            <h1>Show a File Content</h1>
+            <input type="file" name='img' placeholder="Img" id="file-uploader" accept=".jpg, .jpeg, .png" >
+            
+            <div id="image-grid">
+        
+            
+            </div>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+          
+    </div>
+    <p id="test">{{pred}}</p>
+</body>
+<script type="text/javascript" src="{{ url_for('static', filename='./script.js') }}"></script>
+</html>
